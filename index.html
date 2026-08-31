@@ -1,0 +1,1244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northstar Digital — Smart systems. Stronger brands. Scalable operations.</title>
+<meta name="description" content="AI systems, websites, automations and content systems for small businesses in Fort Myers and across Southwest Florida. Fixed scope, fixed price, explained in plain English.">
+
+<meta property="og:title" content="Northstar Digital">
+<meta property="og:description" content="Smart systems. Stronger brands. Scalable operations.">
+<meta property="og:image" content="assets/northstar-og.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/northstar-og.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>
+  /* set the ground before first paint so a saved choice never flashes */
+  try { var g = localStorage.getItem('ns-ground');
+        if (g && g !== 'midnight') document.documentElement.setAttribute('data-theme', g); } catch (e) {}
+</script>
+</head>
+<body>
+
+<svg class="sprite" aria-hidden="true" focusable="false"><defs>
+  <g id="ic-callback" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 3.5h5v5"/><path d="M20.5 3.5 15 9"/><path d="M21 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 1 4.2 2 2 0 0 1 3 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7 9.8a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2z"/></g>
+  <g id="ic-ruleprice" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2.5" width="16" height="19" rx="2"/><path d="M8 7h8M8 11h4"/><path d="M14.5 14.5h3.5M16.2 13v7"/><path d="M18 16.5c0-1.1-.9-2-2-2s-2 .9-2 2 .9 1.6 2 2 2 .9 2 2-.9 2-2 2-2-.9-2-2"/></g>
+  <g id="ic-camera" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5a2 2 0 0 1 2-2h2.3l1.3-2h6.8l1.3 2H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.6"/></g>
+  <g id="ic-confirm" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8 8 0 0 1-8.5 8 9 9 0 0 1-3.9-.9L3 20.5l1.9-5.6a8 8 0 0 1-.9-3.9 8 8 0 0 1 8-8.5 8 8 0 0 1 9 8.5z"/><path d="m8.8 11.8 2.2 2.2 4.2-4.4"/></g>
+  <g id="ic-star" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2.8 2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.6l6.5-.9z"/></g>
+  <g id="ic-calendar" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16.5" rx="2"/><path d="M3 10h18M8 2.5v5M16 2.5v5"/><path d="m9.3 15.4 1.9 1.9 3.6-3.8"/></g>
+  <g id="ic-moon" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 14.3A8.6 8.6 0 0 1 9.7 3.5a8.8 8.8 0 1 0 10.8 10.8z"/><path d="M17.5 3v3M16 4.5h3"/></g>
+  <g id="ic-waitlist" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 8.5h13"/><path d="m13.5 5.5 3 3-3 3"/><path d="M20.5 15.5h-13"/><path d="m10.5 12.5-3 3 3 3"/></g>
+  <g id="ic-repeat" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 12a8.5 8.5 0 0 1-14.6 5.9L3 15"/><path d="M3.5 12A8.5 8.5 0 0 1 18.1 6.1L21 9"/><path d="M21 4v5h-5M3 20v-5h5"/></g>
+  <g id="ic-summary" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="18" height="17" rx="2"/><path d="M7.5 15.5v-3M12 15.5v-6M16.5 15.5v-4.5"/></g>
+  <g id="ic-intake" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 3.5H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-14a2 2 0 0 0-2-2h-1.5"/><rect x="8.5" y="1.8" width="7" height="3.6" rx="1"/><path d="M9 11h6M9 14.5h6M9 18h3"/></g>
+  <g id="ic-docchase" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2.8H7a2 2 0 0 0-2 2v14.4a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7.8z"/><path d="M14 2.8v5h5"/><path d="m9.5 15 2 2 3.5-3.8"/></g>
+  <g id="ic-slots" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 6.5V12l3.6 2.2"/></g>
+  <g id="ic-sign" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20.5c2.5 0 2.5-2 2.5-4S5.5 12 8 12s2.5 2.5 2.5 4.5"/><path d="M10.5 16.5c3.5 0 4-4.5 6.5-4.5 1.6 0 2.5 1 4 1"/><path d="m14.5 8.5 5.5-5.5 1.5 1.5-5.5 5.5-2 .5z"/></g>
+  <g id="ic-status" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></g>
+  <g id="ic-phone" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 18.5h3"/></g>
+  <g id="ic-nologin" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m2.5 2.5 19 19"/><path d="M16.5 11V8a4.5 4.5 0 0 0-8.2-2.6"/><path d="M7.5 9.5V8"/><rect x="4.5" y="11" width="15" height="10" rx="2"/></g>
+  <g id="ic-plain" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3.5" width="18" height="17" rx="2"/><path d="M7 9h10M7 12.5h10M7 16h6"/></g>
+  <g id="ic-edit" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H5.5a2 2 0 0 0-2 2v12.5a2 2 0 0 0 2 2H18a2 2 0 0 0 2-2V13"/><path d="m17.5 2.5 4 4L13 15l-4.5.5L9 11z"/></g>
+  <g id="ic-oneperson" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="7.5" r="4"/><path d="M4.5 21c0-4.1 3.4-6.5 7.5-6.5s7.5 2.4 7.5 6.5"/></g>
+</defs></svg>
+
+<!-- =====================================================================
+     THE STAGE — one fixed layer that lives under the entire page.
+     The film runs here from the first scroll to the moment the reader
+     reaches the ask, then settles. Nothing below ever cuts it away.
+     ===================================================================== -->
+
+<div class="stage">
+  <canvas class="stage__standin" id="stageStandin"></canvas>
+  <canvas class="stage__field" id="stageField"></canvas>
+  <div class="stage__starfield"></div>
+  <div class="stage__tint"></div>
+  <div class="stage__vignette"></div>
+  <div class="stage__grain"></div>
+</div>
+
+<!-- ============================ NAV ============================ -->
+<header class="nav">
+  <a class="nav__brand" href="#hero" aria-label="Northstar Digital, back to top">
+    <img src="assets/northstar-og.png" alt="" width="40" height="40">
+    <span class="nav__wordmark sh">
+      <span>NORTHSTAR</span>
+      <span class="nav__wordmark-dim">DIGITAL</span>
+    </span>
+  </a>
+  <nav class="nav__links">
+    <a class="ui navlink" href="#services" data-navfor="services">What I build</a>
+    <a class="ui navlink" href="#how"      data-navfor="how">How it works</a>
+    <a class="ui navlink" href="#results"  data-navfor="results">What you get back</a>
+    <a class="ui navlink" href="#pricing"  data-navfor="pricing">Pricing</a>
+    <a class="ui navlink" href="#about"    data-navfor="about">About</a>
+    <div class="themes" role="group" aria-label="Page colour">
+      <button class="themes__btn" type="button" data-ground="midnight" style="--sw:#0a0a0a" aria-pressed="true"  aria-label="Midnight"></button>
+      <button class="themes__btn" type="button" data-ground="cobalt"   style="--sw:linear-gradient(160deg,#1b2a49,#0b1220)" aria-pressed="false" aria-label="Cobalt"></button>
+      <button class="themes__btn" type="button" data-ground="daybreak" style="--sw:linear-gradient(160deg,#f2f6fd,#cfdff4)" aria-pressed="false" aria-label="Daybreak"></button>
+    </div>
+    <a class="btn btn-p nav__cta" href="#contact">Get started
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+    </a>
+  </nav>
+</header>
+
+<main class="flow">
+
+<!-- =====================================================================
+     ACT 1 · HERO — pinned. The film opens full-bleed, the headline
+     assembles line by line, then the whole title block lifts away and
+     hands the frame to the orrery.
+     ===================================================================== -->
+<section class="act act--hero" id="hero" data-act="hero" data-scroll="5.6">
+  <div class="act__pin">
+    <div class="hero">
+
+      <div class="hero__copy">
+        <div class="chip lbl hero__chip">
+          <span class="chip__dot"></span>
+          Fort Myers, FL &nbsp;&middot;&nbsp; Serving SWFL
+        </div>
+
+        <h1 class="h hero__title">
+          <span class="line"><span class="line__inner">Smart systems.</span></span>
+          <span class="line"><span class="line__inner">Stronger brands.</span></span>
+          <span class="line"><span class="line__inner">Scalable operations.</span></span>
+        </h1>
+
+        <p class="sh hero__kicker">AI powered. Human focused. Results driven.</p>
+
+        <p class="hero__lede">Most business owners aren't confused because AI is hard. They're confused because nobody has ever explained it in their language. I build the websites, automations and systems &mdash; then I show you exactly how they work.</p>
+
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn-p btn-lg">Get started
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </a>
+          <a href="#how" class="btn btn-s btn-lg ui">See how it works</a>
+        </div>
+
+        <dl class="hero__marks">
+          <div class="hero__mark">
+            <dt class="ui">Plain English</dt><dd>No jargon, ever</dd>
+          </div>
+          <div class="hero__mark">
+            <dt class="ui">One partner</dt><dd>You work with me</dd>
+          </div>
+          <div class="hero__mark hero__mark--accent">
+            <dt class="ui">From $600</dt><dd>Fixed scope, fixed price</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- ===== SIGNATURE MOVE ====================================
+           The orrery does not spin on a timer. Scroll turns it. Each
+           node carries a real moment from a working system, and its
+           card only opens while that node is docked at the reading
+           position. Stop scrolling and the system stops with you.
+           ========================================================= -->
+      <div class="orrery" id="orrery">
+        <svg class="orrery__chart" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <radialGradient id="ns-core" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#9cc9ff" stop-opacity=".6"/>
+              <stop offset="100%" stop-color="#1988ff" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle class="orrery__halo" cx="300" cy="300" r="200" fill="url(#ns-core)"/>
+
+          <circle cx="300" cy="300" r="150" stroke="rgba(142,153,168,0.3)" stroke-width="1.1"/>
+          <g class="orrery__lat" stroke="rgba(142,153,168,0.2)" stroke-width="1">
+            <ellipse cx="300" cy="300" rx="150" ry="150"/>
+            <ellipse cx="300" cy="300" rx="150" ry="112"/>
+            <ellipse cx="300" cy="300" rx="150" ry="68"/>
+            <ellipse cx="300" cy="300" rx="150" ry="22"/>
+            <ellipse cx="300" cy="300" rx="22"  ry="150"/>
+            <ellipse cx="300" cy="300" rx="68"  ry="150"/>
+            <ellipse cx="300" cy="300" rx="112" ry="150"/>
+          </g>
+
+          <circle cx="300" cy="300" r="235" stroke="rgba(25,136,255,0.3)" stroke-width="1.1"/>
+          <circle cx="300" cy="300" r="182" stroke="rgba(142,153,168,0.22)" stroke-width="1" stroke-dasharray="4 8"/>
+
+          <g class="orrery__ticks" stroke="rgba(142,153,168,0.34)" stroke-width="1">
+            <path d="M300 42 v10 M300 558 v-10 M42 300 h10 M558 300 h-10"/>
+            <path d="M482 118 l-7 7 M118 482 l7 -7 M482 482 l-7 -7 M118 118 l7 7"/>
+            <g stroke="rgba(142,153,168,0.2)">
+              <path d="M429 62 l-4 8 M171 538 l4 -8 M538 429 l-8 -4 M62 171 l8 4"/>
+              <path d="M429 538 l-4 -8 M171 62 l4 8 M538 171 l-8 4 M62 429 l8 -4"/>
+            </g>
+          </g>
+          <circle cx="300" cy="300" r="258" stroke="rgba(142,153,168,0.12)" stroke-width="1"/>
+
+          <circle cx="300" cy="300" r="66" stroke="rgba(25,136,255,0.34)" stroke-width="1"/>
+          <circle cx="300" cy="300" r="46" fill="rgba(25,136,255,0.07)" stroke="rgba(25,136,255,0.22)" stroke-width="1"/>
+        </svg>
+
+        <img class="orrery__mark" src="assets/northstar-og.png" alt="Northstar Digital">
+
+        <!-- Each node opens at its OWN angle, at its own size. Information
+             arrives and leaves all the way around the dial instead of
+             queueing at one spot. -->
+        <div class="track" data-rev="1" data-rate="1">
+          <div class="node" data-ang="318" data-dock="-40" data-size="lg" style="--r: 27cqw; --pop-top: -34px;">
+            <div class="upright">
+              <span class="pin"></span><span class="leader"></span>
+              <div class="pop">
+                <div class="lbl pop__label">Missed call</div>
+                <div class="pop__body">Answered and quoted in 40 seconds</div>
+              </div>
+            </div>
+          </div>
+          <div class="node" data-ang="78" data-dock="155" data-size="sm" style="--r: 27cqw; --pop-top: -18px;">
+            <div class="upright">
+              <span class="pin"></span><span class="leader"></span>
+              <div class="pop">
+                <div class="lbl pop__label">After hours</div>
+                <div class="pop__body">11:40pm inquiry handled, you slept through it</div>
+              </div>
+            </div>
+          </div>
+          <div class="node" data-ang="198" data-dock="25" data-size="md" style="--r: 27cqw; --pop-top: -46px;">
+            <div class="upright">
+              <span class="pin"></span><span class="leader"></span>
+              <div class="pop">
+                <div class="lbl pop__label">Weekly summary</div>
+                <div class="pop__body">14 inquiries, 9 booked, 2 need you</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="track" data-rev="-1" data-rate="1.35">
+          <div class="node" data-ang="24" data-dock="205" data-size="md" style="--r: 19cqw; --pop-top: -30px;">
+            <div class="upright">
+              <span class="pin"></span><span class="leader"></span>
+              <div class="pop">
+                <div class="lbl pop__label">New lead</div>
+                <div class="pop__body">Booked straight to your calendar</div>
+              </div>
+            </div>
+          </div>
+          <div class="node" data-ang="144" data-dock="-75" data-size="sm" style="--r: 19cqw; --pop-top: -16px;">
+            <div class="upright">
+              <span class="pin"></span><span class="leader"></span>
+              <div class="pop">
+                <div class="lbl pop__label">Quote sent</div>
+                <div class="pop__body">Priced from your own rules, not a guess</div>
+              </div>
+            </div>
+          </div>
+          <div class="node" data-ang="264" data-dock="110" data-size="lg" style="--r: 19cqw; --pop-top: -40px;">
+            <div class="upright">
+              <span class="pin"></span><span class="leader"></span>
+              <div class="pop">
+                <div class="lbl pop__label">Reminder</div>
+                <div class="pop__body">Tomorrow's job confirmed by text</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== the four stages strip, riding out of the hero ===== -->
+<section class="band band--stages">
+  <div class="shell">
+    <div class="stages reveal">
+      <div class="stages__head">
+        <span class="lbl stages__title">From first call to a system you own</span>
+        <span class="lbl chip stages__badge">&#10003; 2&ndash;4 weeks</span>
+      </div>
+      <div class="stages__grid">
+        <div class="stages__cell" data-seq="0">
+          <div class="lbl stages__when">Week 0 &middot; Step 1</div>
+          <div class="ui stages__name">Call</div>
+          <p class="stages__note">Thirty minutes. You describe the week that annoys you. No pitch.</p>
+        </div>
+        <div class="stages__cell" data-seq="1">
+          <div class="lbl stages__when">Week 1 &middot; Step 2</div>
+          <div class="ui stages__name">Plan</div>
+          <p class="stages__note">A short written scope: what I'd build, what it costs, what it won't do.</p>
+        </div>
+        <div class="stages__cell" data-seq="2">
+          <div class="lbl stages__when">Weeks 2&ndash;4 &middot; Step 3</div>
+          <div class="ui stages__name">Build</div>
+          <p class="stages__note">You review real screens as it goes, not mockups of mockups.</p>
+        </div>
+        <div class="stages__cell" data-seq="3">
+          <div class="lbl stages__when">Ongoing &middot; Step 4</div>
+          <div class="ui stages__name">Launch &amp; support</div>
+          <p class="stages__note">We go live, then you drive it while I answer questions.</p>
+        </div>
+      </div>
+      <div class="stages__rail"><div class="stages__fill"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     ACT 2 · WHAT I BUILD — the stage cools and steps back so six cards
+     can carry the weight. They arrive on a stagger keyed to scroll,
+     not to a timer.
+     ===================================================================== -->
+<section class="band band--services" id="services" data-ground="services">
+  <div class="shell">
+    <span class="lbl eyebrow">What I build</span>
+    <h2 class="h band__title reveal">Six services. One coherent system.</h2>
+    <p class="band__lede reveal">Pick one piece or the whole thing. Each is scoped and priced before any work starts, so there are no surprise invoices.</p>
+
+    <div class="cards">
+      <article class="card reveal is-clickable" data-seq="0">
+        <div class="card__icon">
+          <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="14" rx="2"/><path d="M2.5 8h19"/><circle cx="5.6" cy="6" r=".5" fill="var(--accent)"/><circle cx="7.6" cy="6" r=".5" fill="var(--accent)"/><path d="m11 11 5.5 3.2-2.4.8-.8 2.4z"/></svg>
+        </div>
+        <h3 class="h card__title" id="svc-web-title">Websites &amp; landing pages</h3>
+        <p class="card__body">A fast, clear site that explains what you do and turns visitors into inquiries.</p>
+        <div class="card__foot">
+          <div class="sh card__price">From $600</div>
+          <button class="card__more ui" type="button" data-open="svc-web"
+                  aria-label="How Websites and landing pages works">
+            How this works
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <div class="deep" id="svc-web" hidden>
+          <p class="deep__intro">A site whose only job is to explain what you do and turn a visitor into an inquiry.</p>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">Where it starts</h4>
+            <p>Usually one of two things. There is no site at all and you are losing the people who looked you up, or there is a site a relative built years ago that you cannot edit and that no longer says what you actually do.</p>
+          </section>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">How it gets built</h4>
+            <ol class="deep__steps">
+            <li>One interview, about an hour. I ask how you would explain the job to a neighbour.</li>
+            <li>I write the copy from that. You read it as a document before anything gets designed.</li>
+            <li>Design and build. You review real screens in a browser, not pictures of screens.</li>
+            <li>Launch, then a walkthrough where you edit a page yourself while I watch.</li>
+            </ol>
+          </section>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">What moves the price</h4>
+            <p class="deep__note">From $600 is the floor. These are what push a real quote away from it.</p>
+            <ul class="deep__drivers">
+            <li class="deep__up">More pages &mdash; three is the floor, ten is a different build</li>
+            <li class="deep__up">Booking, payment or a quote calculator inside the page</li>
+            <li class="deep__up">Several locations or service areas that each need to rank</li>
+            <li class="deep__down">You already have photos and a logo</li>
+            <li class="deep__down">You write your own copy, or approve mine quickly</li>
+            </ul>
+          </section>
+
+          <details class="deep__tech">
+            <summary class="ui">The technical bit</summary>
+            <p>Hand-built HTML, CSS and JavaScript when the site is mostly stable, or a lightweight CMS when you need to change things weekly. Static hosting behind a CDN so pages arrive fast anywhere. DNS and SSL set up and handed over to you. Forms post to your inbox and your phone at the same time, with a stored copy so nothing depends on an email arriving.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card reveal is-clickable" data-seq="1">
+        <div class="card__icon">
+          <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="4.5" cy="6" r="2.2"/><circle cx="4.5" cy="18" r="2.2"/><circle cx="19.5" cy="12" r="2.2"/><path d="M6.6 7.1 17.4 11M6.6 16.9 17.4 13"/><path d="M11.6 2.6 10.4 5.4l2.8-.4"/></svg>
+        </div>
+        <h3 class="h card__title" id="svc-auto-title">AI systems &amp; automations</h3>
+        <p class="card__body">The quiet machinery that answers, sorts, follows up and records while you work.</p>
+        <div class="card__foot">
+          <div class="sh card__price">From $1,200</div>
+          <button class="card__more ui" type="button" data-open="svc-auto"
+                  aria-label="How AI systems and automations works">
+            How this works
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <div class="deep" id="svc-auto" hidden>
+          <p class="deep__intro">The quiet machinery that answers, sorts, follows up and records while you are on a job.</p>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">Where it starts</h4>
+            <p>One task that eats hours every week and that you could describe in a single sentence. Missed calls. Chasing quotes. Re-typing the same job details into three different places.</p>
+          </section>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">How it gets built</h4>
+            <ol class="deep__steps">
+            <li>We map what actually happens now, step by step, including the parts you do without thinking.</li>
+            <li>We pick one workflow. Not five &mdash; the first has to work before it earns the second.</li>
+            <li>I build it and run it alongside your manual process, so nothing depends on it yet.</li>
+            <li>Once it has matched your own handling for a week or two, we cut over.</li>
+            </ol>
+          </section>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">What moves the price</h4>
+            <p class="deep__note">From $1,200 is the floor. These are what push a real quote away from it.</p>
+            <ul class="deep__drivers">
+            <li class="deep__up">How many tools have to talk to each other</li>
+            <li class="deep__up">A tool with no proper API, which means a workaround</li>
+            <li class="deep__up">More decision branches &mdash; “if it is a commercial job, do this instead”</li>
+            <li class="deep__down">Your tools are mainstream and already connect</li>
+            <li class="deep__down">One clean workflow rather than a rebuild of everything</li>
+            </ul>
+          </section>
+
+          <details class="deep__tech">
+            <summary class="ui">The technical bit</summary>
+            <p>n8n, Make or Zapier depending on how complex the logic is and who maintains it afterwards. Claude or OpenAI APIs for any step that has to read or write language &mdash; reading an inquiry, drafting a reply, summarising a week. Webhooks between the tools you already pay for. Every run is logged, so when something looks wrong you can see exactly what the system did and why.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card reveal is-clickable" data-seq="2">
+        <div class="card__icon">
+          <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 12.5a2 2 0 0 1-2 2H8l-4 3V5.5a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2z"/><path d="M7.6 9h.01M10.5 9h.01M13.4 9h.01"/><path d="M19 8.2a2 2 0 0 1 2 2v8.3l-2.6-2h-3.1"/></svg>
+        </div>
+        <h3 class="h card__title" id="svc-bot-title">Chatbots &amp; support AI</h3>
+        <p class="card__body">An assistant on your site and phone that answers real questions, not scripts.</p>
+        <div class="card__foot">
+          <div class="sh card__price">From $900</div>
+          <button class="card__more ui" type="button" data-open="svc-bot"
+                  aria-label="How Chatbots and support AI works">
+            How this works
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <div class="deep" id="svc-bot" hidden>
+          <p class="deep__intro">An assistant on your site and your phone that answers real questions instead of reciting a script.</p>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">Where it starts</h4>
+            <p>You are answering the same twenty questions every week. Do you cover my area, what does it cost, how soon can you come, do you handle emergencies.</p>
+          </section>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">How it gets built</h4>
+            <ol class="deep__steps">
+            <li>We collect what you already have &mdash; prices, service area, FAQs, past emails.</li>
+            <li>I ground the assistant in that material so it answers from your facts rather than guessing.</li>
+            <li>We test it against questions you have actually been asked, and fix what it gets wrong.</li>
+            <li>We set the handoff rules: what it answers, what it books, and what goes straight to you.</li>
+            </ol>
+          </section>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">What moves the price</h4>
+            <p class="deep__note">From $900 is the floor. These are what push a real quote away from it.</p>
+            <ul class="deep__drivers">
+            <li class="deep__up">It books or quotes, rather than only answering</li>
+            <li class="deep__up">Phone coverage as well as the website</li>
+            <li class="deep__up">Little existing written material, so the source has to be created</li>
+            <li class="deep__down">You already have prices and FAQs written down</li>
+            <li class="deep__down">Website only, answering only</li>
+            </ul>
+          </section>
+
+          <details class="deep__tech">
+            <summary class="ui">The technical bit</summary>
+            <p>Retrieval over your own documents rather than a general model improvising &mdash; it can only answer from material you gave it. Claude or OpenAI for the language itself. For phone, a telephony provider handles the call and the same assistant answers it. Anything it is not confident about escalates to you with the whole conversation attached.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card reveal is-clickable" data-seq="3">
+        <div class="card__icon">
+          <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 2.6 2.2 4.3L15.5 8l-3.1 3.1.7 4.4L9 13.4l-4.1 2.1.7-4.4L2.5 8l4.3-1.1z"/><rect x="13.5" y="16" width="3.4" height="5.4" rx="1"/><rect x="18.2" y="13.6" width="3.4" height="7.8" rx="1"/></svg>
+        </div>
+        <h3 class="h card__title" id="svc-brand-title">Branding &amp; graphics</h3>
+        <p class="card__body">A mark, a palette and a template set that make a small operation look established.</p>
+        <div class="card__foot">
+          <div class="sh card__price">From $400</div>
+          <button class="card__more ui" type="button" data-open="svc-brand"
+                  aria-label="How Branding and graphics works">
+            How this works
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <div class="deep" id="svc-brand" hidden>
+          <p class="deep__intro">A mark, a palette and a template set that make a one-van operation look established.</p>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">Where it starts</h4>
+            <p>You look smaller than you are. The logo is a font somebody picked in 2016, and the truck, the invoice and the Instagram look like three different companies.</p>
+          </section>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">How it gets built</h4>
+            <ol class="deep__steps">
+            <li>A short interview about who you want to be mistaken for, and who you do not.</li>
+            <li>Mark, colour palette and type, presented as a small set of options rather than forty.</li>
+            <li>A template set for the things you actually send &mdash; quotes, invoices, posts, signage.</li>
+            <li>You get the source files. They are yours, not licensed from me.</li>
+            </ol>
+          </section>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">What moves the price</h4>
+            <p class="deep__note">From $400 is the floor. These are what push a real quote away from it.</p>
+            <ul class="deep__drivers">
+            <li class="deep__up">A full mark from scratch rather than a cleanup of what you have</li>
+            <li class="deep__up">Print and vehicle work, which needs different files and specs</li>
+            <li class="deep__up">More templates</li>
+            <li class="deep__down">You keep your existing name treatment and refresh only colour and type</li>
+            <li class="deep__down">Digital only</li>
+            </ul>
+          </section>
+
+          <details class="deep__tech">
+            <summary class="ui">The technical bit</summary>
+            <p>Vector source files, so the mark works on a business card and on a truck door. A written palette and type spec, so a printer and a website produce the same colour. Templates in Canva or Figma so you can change the wording yourself without opening a design tool you do not know.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card reveal is-clickable" data-seq="4">
+        <div class="card__icon">
+          <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6.5" width="13" height="15" rx="2"/><path d="M5.6 10.5h6.8M5.6 14h6.8M5.6 17.5h4"/><path d="M18.5 18.5V5a2 2 0 0 0-2-2H7"/><path d="M17 8.5h4.5"/></svg>
+        </div>
+        <h3 class="h card__title" id="svc-content-title">Content systems</h3>
+        <p class="card__body">A repeatable way to publish without it landing on your evenings.</p>
+        <div class="card__foot">
+          <div class="sh card__price">From $600</div>
+          <button class="card__more ui" type="button" data-open="svc-content"
+                  aria-label="How Content systems works">
+            How this works
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <div class="deep" id="svc-content" hidden>
+          <p class="deep__intro">A repeatable way to publish that does not land on your evenings.</p>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">Where it starts</h4>
+            <p>You know you should be posting. You post for two weeks, a busy month happens, and it stops. The problem is not discipline. There is no system underneath it.</p>
+          </section>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">How it gets built</h4>
+            <ol class="deep__steps">
+            <li>We pick the one or two channels that make sense for your customers, and drop the rest.</li>
+            <li>We build a format you can repeat &mdash; the same shapes of post, not a blank page every time.</li>
+            <li>I set up a queue, so things are scheduled ahead rather than made the morning they go out.</li>
+            <li>We run one full month together, then you take it over with the system still standing.</li>
+            </ol>
+          </section>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">What moves the price</h4>
+            <p class="deep__note">From $600 is the floor. These are what push a real quote away from it.</p>
+            <ul class="deep__drivers">
+            <li class="deep__up">Video rather than static posts</li>
+            <li class="deep__up">More channels</li>
+            <li class="deep__up">I produce the material rather than assembling what you shoot</li>
+            <li class="deep__down">You are comfortable filming rough clips on a phone</li>
+            <li class="deep__down">One channel, done properly</li>
+            </ul>
+          </section>
+
+          <details class="deep__tech">
+            <summary class="ui">The technical bit</summary>
+            <p>A scheduling tool holding the queue, so a week of posting takes one sitting. AI-assisted repurposing turns one asset into several formats &mdash; a job walkthrough becomes a short, a carousel and a caption. An asset library so photos from real jobs are findable months later. Nothing publishes without passing your approval step.</p>
+          </details>
+        </div>
+      </article>
+
+      <article class="card card--lit reveal is-clickable" data-seq="5">
+        <div class="card__icon card__icon--lit">
+          <svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5 2.5 8.2 12 12.9l9.5-4.7z"/><path d="M6.4 10.6v5.1c0 1.9 2.5 3.2 5.6 3.2s5.6-1.3 5.6-3.2v-5.1"/><path d="M21.5 8.2v6"/></svg>
+        </div>
+        <h3 class="h card__title" id="svc-train-title">AI training for your team</h3>
+        <p class="card__body">A half-day that turns &ldquo;I don't get it&rdquo; into &ldquo;I use this every day.&rdquo;</p>
+        <div class="card__foot">
+          <div class="sh card__price">From $250</div>
+          <button class="card__more ui" type="button" data-open="svc-train"
+                  aria-label="How AI training for your team works">
+            How this works
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+
+        <div class="deep" id="svc-train" hidden>
+          <p class="deep__intro">A half-day that turns &ldquo;I don't get it&rdquo; into &ldquo;I use this every day.&rdquo;</p>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">Where it starts</h4>
+            <p>Everyone tells you to use AI. Nobody tells you which part, on what, or what it is bad at. So it gets opened once and never again.</p>
+          </section>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">How it gets built</h4>
+            <ol class="deep__steps">
+            <li>Before the session I ask what your team actually does all week.</li>
+            <li>We spend the half-day on those tasks, on your own accounts, with hands on keyboards.</li>
+            <li>We build at least one thing that is still useful on Monday.</li>
+            <li>You get a written cheat sheet in your own words, not a generic handout.</li>
+            </ol>
+          </section>
+
+          <section class="deep__block">
+            <h4 class="lbl deep__h">What moves the price</h4>
+            <p class="deep__note">From $250 is the floor. These are what push a real quote away from it.</p>
+            <ul class="deep__drivers">
+            <li class="deep__up">A larger team, or separate sessions for different roles</li>
+            <li class="deep__up">On-site rather than remote</li>
+            <li class="deep__up">We build a working tool during the session and keep it</li>
+            <li class="deep__down">Remote</li>
+            <li class="deep__down">A small team in one room</li>
+            </ul>
+          </section>
+
+          <details class="deep__tech">
+            <summary class="ui">The technical bit</summary>
+            <p>Whatever you will actually keep paying for &mdash; usually Claude or ChatGPT on your own accounts, not mine. Prompt patterns written around your real tasks. A short written guide to what should never go into a chatbot: customer records, card details, anything you would not email to a stranger.</p>
+          </details>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     ACT 3 · THE PEAK — HOW IT WORKS
+     This is the one engineered moment. It gets the longest pin, the
+     silence in front of it, and the darkest ground on the page. The
+     lead journey is not shown; it is built, one step at a time, and
+     the reader's own scroll is what builds it.
+     ===================================================================== -->
+<section class="act act--peak" id="how" data-act="peak" data-scroll="5" data-ground="peak">
+  <div class="act__pin">
+    <div class="shell peak">
+
+      <div class="peak__head">
+        <span class="lbl eyebrow">How it works</span>
+        <h2 class="h peak__title">
+          <span class="line"><span class="line__inner">No mystery.</span></span>
+          <span class="line"><span class="line__inner">Here's the whole thing, drawn out.</span></span>
+        </h2>
+        <p class="peak__lede">How a lead becomes a booked job. Six steps &mdash; you show up at step five, when there's something worth your time.</p>
+      </div>
+
+      <div class="journey">
+        <div class="lbl journey__flag">The lead journey</div>
+
+        <svg class="journey__chart" viewBox="0 0 1140 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="A lead journey in six steps: someone finds you, they reach out, the system replies, it gets sorted, you step in, it lands on the calendar.">
+          <g stroke="rgba(142,153,168,0.45)" stroke-width="1.2">
+            <circle class="jd" data-step="0" style="--len:30"  cx="14" cy="103" r="4"/>
+            <rect   class="jd" data-step="0" style="--len:420" x="70"  y="70" width="140" height="66" rx="9"/>
+            <rect   class="jd" data-step="1" style="--len:420" x="250" y="70" width="140" height="66" rx="9"/>
+            <rect   class="jd jd--accent" data-step="2" style="--len:420" x="430" y="70" width="140" height="66" rx="9" stroke="var(--accent)" stroke-width="1.7"/>
+            <rect   class="jd" data-step="3" style="--len:420" x="610" y="70" width="140" height="66" rx="9"/>
+            <rect   class="jd jd--you" data-step="4" style="--len:420" x="790" y="70" width="140" height="66" rx="9" stroke="#d9e7f7" stroke-width="1.7"/>
+            <path   class="jd" data-step="4" style="--len:260" d="M860 70 V34 H1040 V70"/>
+            <rect   class="jd" data-step="5" style="--len:420" x="970" y="70" width="140" height="66" rx="9"/>
+            <circle class="jd jd--end" data-step="5" style="--len:34" cx="1128" cy="103" r="5" fill="var(--accent)" stroke="var(--accent)"/>
+          </g>
+
+          <g stroke="var(--accent)" stroke-width="1.5" class="journey__flow">
+            <path class="jf" data-step="0" d="M14 103 H70"/>
+            <path class="jf" data-step="1" d="M210 103 H250"/>
+            <path class="jf" data-step="2" d="M390 103 H430"/>
+            <path class="jf" data-step="3" d="M570 103 H610"/>
+            <path class="jf" data-step="4" d="M750 103 H790"/>
+            <path class="jf" data-step="5" d="M930 103 H970"/>
+            <path class="jf" data-step="5" d="M1110 103 H1128"/>
+          </g>
+
+          <g class="sh" font-size="10" letter-spacing="1.6" fill="#8e99a8">
+            <text class="jw" data-step="0" x="70"  y="58">STEP 1</text>
+            <text class="jw" data-step="1" x="250" y="58">STEP 2</text>
+            <text class="jw" data-step="2" x="430" y="58" fill="#1988ff">STEP 3</text>
+            <text class="jw" data-step="3" x="610" y="58">STEP 4</text>
+            <text class="jw" data-step="4" x="790" y="58" fill="#d9e7f7">STEP 5 &mdash; YOU</text>
+            <text class="jw" data-step="5" x="970" y="58">STEP 6</text>
+            <text class="jw" data-step="4" x="878" y="26">DETAILS ALREADY GATHERED</text>
+          </g>
+
+          <g font-family="Manrope, sans-serif" font-size="14.5" font-weight="700" fill="#e7e7e7">
+            <text class="jw" data-step="0" x="86"  y="100">Someone</text><text class="jw" data-step="0" x="86"  y="119">finds you</text>
+            <text class="jw" data-step="1" x="266" y="100">They reach</text><text class="jw" data-step="1" x="266" y="119">out</text>
+            <text class="jw" data-step="2" x="446" y="100">The system</text><text class="jw" data-step="2" x="446" y="119">replies</text>
+            <text class="jw" data-step="3" x="626" y="100">It gets</text><text class="jw" data-step="3" x="626" y="119">sorted</text>
+            <text class="jw" data-step="4" x="806" y="100">You step</text><text class="jw" data-step="4" x="806" y="119">in</text>
+            <text class="jw" data-step="5" x="986" y="100">On the</text><text class="jw" data-step="5" x="986" y="119">calendar</text>
+          </g>
+
+          <g class="sh" font-size="10.5" fill="#8e99a8" font-weight="500">
+            <text class="jw" data-step="0" x="86"  y="162">search &middot; ad &middot; sign</text>
+            <text class="jw" data-step="1" x="266" y="162">call &middot; form &middot; chat</text>
+            <text class="jw" data-step="2" x="446" y="162">under a minute</text>
+            <text class="jw" data-step="3" x="626" y="162">flagged or answered</text>
+            <text class="jw" data-step="4" x="806" y="162">you decide</text>
+            <text class="jw" data-step="5" x="986" y="162">booked &middot; confirmed</text>
+          </g>
+
+          <!-- transparent hit targets: hover or focus any step to open it -->
+          <g class="journey__hits">
+            <rect class="jh" data-step="0" x="70" y="62" width="140" height="108" rx="9"
+                  tabindex="0" role="button" aria-label="Someone finds you"
+                  data-title="Someone finds you" data-info="Search, a truck sign, a referral, an ad. The system does not care which &mdash; every route starts the same clock."/>
+            <rect class="jh" data-step="1" x="250" y="62" width="140" height="108" rx="9"
+                  tabindex="0" role="button" aria-label="They reach out"
+                  data-title="They reach out" data-info="Call, form or chat. All three land in one place instead of three inboxes you check at different times."/>
+            <rect class="jh" data-step="2" x="430" y="62" width="140" height="108" rx="9"
+                  tabindex="0" role="button" aria-label="The system replies"
+                  data-title="The system replies" data-info="Under a minute, in your voice, using your real availability. Not &ldquo;we will get back to you.&rdquo;"/>
+            <rect class="jh" data-step="3" x="610" y="62" width="140" height="108" rx="9"
+                  tabindex="0" role="button" aria-label="It gets sorted"
+                  data-title="It gets sorted" data-info="Qualified, priced against your own rules, tagged and logged. Junk is filtered out before it ever reaches you."/>
+            <rect class="jh" data-step="4" x="790" y="62" width="140" height="108" rx="9"
+                  tabindex="0" role="button" aria-label="You step in"
+                  data-title="You step in" data-info="The only step that needs you. You get a decision to make, not a conversation to start from nothing."/>
+            <rect class="jh" data-step="5" x="970" y="62" width="140" height="108" rx="9"
+                  tabindex="0" role="button" aria-label="On the calendar"
+                  data-title="On the calendar" data-info="Booked, confirmed by text, details already attached. The reminder goes out the day before on its own."/>
+          </g>
+        </svg>
+
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== the before / after pair, landing after the peak releases ===== -->
+<section class="band band--compare">
+  <div class="shell">
+    <div class="compare">
+      <div class="compare__panel reveal">
+        <div class="lbl compare__label">Before &mdash; fourteen tabs and a bad feeling</div>
+        <ul class="compare__list compare__list--before">
+          <li>Calls come in while you're on a job. Nobody answers.</li>
+          <li>Four tools that don't talk to each other, plus a spreadsheet.</li>
+          <li>A website a relative built in 2019. You can't edit it.</li>
+          <li>Everyone says &ldquo;use AI.&rdquo; No one says which part, or how.</li>
+        </ul>
+      </div>
+      <div class="compare__panel compare__panel--lit reveal">
+        <div class="lbl compare__label compare__label--accent">After &mdash; one system you actually understand</div>
+        <ul class="compare__list compare__list--after">
+          <li>Every call and form is answered, qualified and logged in seconds.</li>
+          <li>Jobs land on your calendar with the details already filled in.</li>
+          <li>A site you can update yourself, in words, not code.</li>
+          <li>One dashboard, in plain English, showing what's working.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== no rip-and-replace ===== -->
+<section class="band band--plugin">
+  <div class="shell">
+    <div class="plugin">
+      <div class="plugin__copy">
+        <span class="lbl eyebrow">No rip-and-replace</span>
+        <h3 class="h plugin__title reveal">AI plugs into the tools you already use.</h3>
+        <p class="plugin__body reveal">You keep your phone number, your email, your calendar, your invoicing. The system sits in the middle and moves information between them so nothing gets dropped.</p>
+        <p class="plugin__body reveal">If a tool you rely on isn't on this list, it almost certainly still connects. That's the first thing I check on our call.</p>
+      </div>
+
+      <div class="plugin__diagram">
+        <div class="plugin__inputs">
+          <div class="ui plugin__input reveal" data-seq="0">Your phone number</div>
+          <div class="ui plugin__input reveal" data-seq="1">Email and calendar</div>
+          <div class="ui plugin__input reveal" data-seq="2">Invoicing / QuickBooks</div>
+          <div class="ui plugin__input reveal" data-seq="3">Your CRM or spreadsheet</div>
+        </div>
+        <svg class="plugin__wires" width="54" height="160" viewBox="0 0 54 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g stroke="rgba(25,136,255,0.6)" stroke-width="1.3">
+            <path class="draw" style="--len:100" d="M2 22 C 27 22, 27 80, 52 80"/>
+            <path class="draw" style="--len:80"  d="M2 61 C 27 61, 27 80, 52 80"/>
+            <path class="draw" style="--len:80"  d="M2 99 C 27 99, 27 80, 52 80"/>
+            <path class="draw" style="--len:100" d="M2 138 C 27 138, 27 80, 52 80"/>
+          </g>
+        </svg>
+        <div class="plugin__out reveal">
+          <div class="lbl plugin__out-label">Your Northstar system</div>
+          <div class="ui plugin__out-body">Routes, replies, records and reports &mdash; automatically</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     ACT 4 · WHAT YOU GET BACK — a short pin. The week empties out as
+     you scroll: the bars retract, the hours come back.
+     ===================================================================== -->
+<section class="act act--results" id="results" data-act="results" data-scroll="2" data-ground="results">
+  <div class="act__pin">
+    <div class="shell results">
+      <span class="lbl eyebrow">What you get back</span>
+      <h2 class="h band__title">Hours back, every week.</h2>
+      <p class="band__lede">These are the ranges I design toward for a small service business. We set your real numbers together on the first call, and I'd rather tell you a build isn't worth it than sell you one.</p>
+
+      <div class="results__grid">
+        <div class="ledger">
+          <div class="ledger__head">
+            <span class="lbl">Where the week goes now</span>
+            <span class="lbl ledger__head-right">Removed</span>
+          </div>
+          <div class="ledger__row" data-seq="0">
+            <div class="ledger__line">
+              <span class="ui ledger__task">Answering and qualifying inquiries</span>
+              <span class="sh ledger__hours">4&ndash;6 hrs / wk</span>
+            </div>
+            <div class="ledger__rail"><div class="ledger__fill" style="--w: 78%"></div></div>
+          </div>
+          <div class="ledger__row" data-seq="1">
+            <div class="ledger__line">
+              <span class="ui ledger__task">Quoting and follow-up</span>
+              <span class="sh ledger__hours">3&ndash;5 hrs / wk</span>
+            </div>
+            <div class="ledger__rail"><div class="ledger__fill" style="--w: 62%"></div></div>
+          </div>
+          <div class="ledger__row" data-seq="2">
+            <div class="ledger__line">
+              <span class="ui ledger__task">Scheduling and reminders</span>
+              <span class="sh ledger__hours">2&ndash;3 hrs / wk</span>
+            </div>
+            <div class="ledger__rail"><div class="ledger__fill" style="--w: 44%"></div></div>
+          </div>
+          <div class="ledger__row" data-seq="3">
+            <div class="ledger__line">
+              <span class="ui ledger__task">Reporting and chasing paperwork</span>
+              <span class="sh ledger__hours">1&ndash;2 hrs / wk</span>
+            </div>
+            <div class="ledger__rail"><div class="ledger__fill" style="--w: 30%"></div></div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="card stat" data-seq="0">
+            <div class="h stat__num">8&ndash;14</div>
+            <div class="stat__note">hours of admin removed from a typical week</div>
+          </div>
+          <div class="card stat" data-seq="1">
+            <div class="h stat__num">&lt;60s</div>
+            <div class="stat__note">from new inquiry to a real reply</div>
+          </div>
+          <div class="card stat" data-seq="2">
+            <div class="h stat__num">0</div>
+            <div class="stat__note">new logins for your team to memorize</div>
+          </div>
+          <div class="card stat" data-seq="3">
+            <div class="h stat__num">2&ndash;4</div>
+            <div class="stat__note">weeks from kickoff to a system that's live</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band band--builtfor">
+  <div class="shell">
+    <div class="builtfor reveal">
+      <div class="builtfor__cell">
+        <button class="builtfor__btn" type="button" aria-expanded="false" aria-controls="bf-trades">
+          <span>
+            <span class="lbl builtfor__label">Built for</span>
+            <span class="ui builtfor__name">Contractors &amp; trades</span>
+          </span>
+          <span class="builtfor__chev" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </span>
+        </button>
+        <div class="builtfor__drop" id="bf-trades" hidden>
+          <div class="lbl builtfor__droph">What this usually looks like</div>
+          <ul class="builtfor__list">
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-callback"/></svg><span>A missed call texts back inside a minute with your next two open slots</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-ruleprice"/></svg><span>Quotes priced from your own rules, sent before you are off the ladder</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-camera"/></svg><span>Job photos from your phone attach themselves to the invoice</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-confirm"/></svg><span>Tomorrow&rsquo;s jobs confirmed by text the evening before</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-star"/></svg><span>A review request that goes out only once the job is actually finished</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="builtfor__cell">
+        <button class="builtfor__btn" type="button" aria-expanded="false" aria-controls="bf-local">
+          <span>
+            <span class="lbl builtfor__label">Built for</span>
+            <span class="ui builtfor__name">Local service businesses</span>
+          </span>
+          <span class="builtfor__chev" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </span>
+        </button>
+        <div class="builtfor__drop" id="bf-local" hidden>
+          <div class="lbl builtfor__droph">What this usually looks like</div>
+          <ul class="builtfor__list">
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-calendar"/></svg><span>Online booking that respects the way you actually schedule</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-moon"/></svg><span>After-hours inquiries captured, answered, and waiting for you by morning</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-waitlist"/></svg><span>Cancellations offered to the waitlist without you making a call</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-repeat"/></svg><span>Repeat customers reminded when they are due, with no list to keep</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-summary"/></svg><span>One weekly summary instead of five dashboards</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="builtfor__cell">
+        <button class="builtfor__btn" type="button" aria-expanded="false" aria-controls="bf-pro">
+          <span>
+            <span class="lbl builtfor__label">Built for</span>
+            <span class="ui builtfor__name">Professional services</span>
+          </span>
+          <span class="builtfor__chev" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </span>
+        </button>
+        <div class="builtfor__drop" id="bf-pro" hidden>
+          <div class="lbl builtfor__droph">What this usually looks like</div>
+          <ul class="builtfor__list">
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-intake"/></svg><span>Intake forms that qualify before the call, so consultations skip the basics</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-docchase"/></svg><span>Document chasing handled by the system rather than by you</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-slots"/></svg><span>Scheduling that offers only the slots you would actually accept</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-sign"/></svg><span>Engagement letters sent, signed and filed in one flow</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-status"/></svg><span>Clients told where their matter stands before they ask</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="builtfor__cell">
+        <button class="builtfor__btn" type="button" aria-expanded="false" aria-controls="bf-left">
+          <span>
+            <span class="lbl builtfor__label">Built for</span>
+            <span class="ui builtfor__name">Anyone tech has left behind</span>
+          </span>
+          <span class="builtfor__chev" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          </span>
+        </button>
+        <div class="builtfor__drop" id="bf-left" hidden>
+          <div class="lbl builtfor__droph">What this usually looks like</div>
+          <ul class="builtfor__list">
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-phone"/></svg><span>Your existing phone number keeps working exactly as it does now</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-nologin"/></svg><span>No new logins for anybody to memorise</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-plain"/></svg><span>A weekly summary written in plain English, not drawn as a chart</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-edit"/></svg><span>A website you update by typing sentences, not by editing code</span></li>
+            <li><svg class="bfi" viewBox="0 0 24 24" aria-hidden="true"><use href="#ic-oneperson"/></svg><span>One person to call when something looks wrong, and it is me</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =====================================================================
+     THE CALM — from here the stage recedes for good. Motion drops to
+     a single soft rise. Prices and a form deserve stillness.
+     ===================================================================== -->
+<section class="band band--pricing calm" id="pricing" data-ground="calm">
+  <div class="shell">
+    <span class="lbl eyebrow">Pricing</span>
+    <h2 class="h band__title reveal">Starting prices, published.</h2>
+    <p class="band__lede reveal">Every project is quoted at a fixed price after our first call. These are the floors, so you know before you pick up the phone.</p>
+
+    <div class="tiers">
+      <article class="card tier reveal">
+        <div class="tier__flag"><span class="lbl">Entry</span></div>
+        <h3 class="h tier__name">Starter Presence</h3>
+        <p class="tier__for">A landing page that makes you look real online and stops losing inquiries.</p>
+        <div class="tier__price"><span class="sh tier__from">from</span><span class="h tier__figure">$600</span></div>
+        <div class="lbl tier__span">1&ndash;2 weeks</div>
+          <div class="tier__mo">
+            <div class="tier__mo-row"><span class="tier__mo-fig">$30/mo</span><span class="tier__mo-note">maintained on your own accounts</span></div>
+            <div class="tier__mo-row"><span class="tier__mo-fig">$75/mo</span><span class="tier__mo-note">hosted and run entirely by me</span></div>
+          </div>
+        <ul class="tier__list">
+          <li>One-page landing site, mobile-first</li>
+          <li>Copy written from one interview</li>
+          <li>Inquiry form routed to your inbox and phone</li>
+          <li>Local search essentials</li>
+          <li>Editing walkthrough included</li>
+        </ul>
+        <a href="#contact" class="btn btn-s ui tier__cta">Start here</a>
+      </article>
+
+      <article class="card tier tier--lit reveal">
+        <div class="tier__flag">
+          <span class="lbl tier__badge">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5.2 5.2L20 7"/></svg>
+            Most chosen
+          </span>
+        </div>
+        <h3 class="h tier__name">Working System</h3>
+        <p class="tier__for">The site plus the automation that removes your worst weekly task.</p>
+        <div class="tier__price"><span class="sh tier__from">from</span><span class="h tier__figure tier__figure--accent">$1,200</span></div>
+        <div class="lbl tier__span">2&ndash;3 weeks</div>
+          <div class="tier__mo">
+            <div class="tier__mo-row"><span class="tier__mo-fig">$60/mo</span><span class="tier__mo-note">maintained on your own accounts</span></div>
+            <div class="tier__mo-row"><span class="tier__mo-fig">$125/mo</span><span class="tier__mo-note">hosted and run entirely by me</span></div>
+          </div>
+        <ul class="tier__list">
+          <li>Everything in Starter Presence</li>
+          <li>One AI automation, built end to end</li>
+          <li>Missed-call and after-hours capture</li>
+          <li>Connections to your existing tools</li>
+          <li>Plain-English dashboard</li>
+          <li>Team walkthrough session</li>
+        </ul>
+        <a href="#contact" class="btn btn-p tier__cta">Get started
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+        </a>
+      </article>
+
+      <article class="card tier reveal">
+        <div class="tier__flag"><span class="lbl">Full build</span></div>
+        <h3 class="h tier__name">Operations Build</h3>
+        <p class="tier__for">Several systems working together, plus the brand to match.</p>
+        <div class="tier__price"><span class="sh tier__from">from</span><span class="h tier__figure">$3,500</span></div>
+        <div class="lbl tier__span">4&ndash;6 weeks</div>
+          <div class="tier__mo">
+            <div class="tier__mo-row"><span class="tier__mo-fig">$90/mo</span><span class="tier__mo-note">maintained on your own accounts</span></div>
+            <div class="tier__mo-row"><span class="tier__mo-fig">$200/mo</span><span class="tier__mo-note">hosted and run entirely by me</span></div>
+          </div>
+        <ul class="tier__list">
+          <li>Everything in Working System</li>
+          <li>Multiple automations across sales and ops</li>
+          <li>Support chatbot trained on your material</li>
+          <li>Content system set up and running</li>
+          <li>Brand refresh and template set</li>
+          <li>90 days of support after launch</li>
+        </ul>
+        <a href="#contact" class="btn btn-s ui tier__cta">Talk it through</a>
+      </article>
+    </div>
+
+    <div class="addons">
+      <div class="card reveal">
+        <div class="lbl addons__label">Add on as you go</div>
+        <dl class="addons__list">
+          <div><dt>AI training half-day for your team</dt><dd class="sh">$250</dd></div>
+          <div><dt>Brand kit and template set</dt><dd class="sh">$400</dd></div>
+          <div><dt>Extra automation added later</dt><dd class="sh">from $500</dd></div>
+          <div><dt>Support chatbot on an existing site</dt><dd class="sh">from $900</dd></div>
+          <div><dt>Monthly care, updates and monitoring</dt><dd class="sh">$30&ndash;$200 / mo</dd></div>
+        </dl>
+      </div>
+      <div class="card reveal">
+        <div class="lbl addons__label">How billing works</div>
+        <div class="addons__notes">
+          <p>Fifty percent to start, fifty on launch. Nothing is invoiced before you approve a written scope.</p>
+          <p>Fixed price, not hourly. If a build takes longer than I estimated, that's my problem, not your invoice.</p>
+          <p>You own everything at the end &mdash; the site, the accounts, the automations and the documentation.</p>
+          <p>Third-party costs (hosting, AI usage, phone numbers) are passed through at cost, typically $20&ndash;80 a month.</p>
+          <p>The monthly is optional. On your own accounts you keep every subscription and login, I keep it running, and you can drop me whenever you like. Hosted, it runs on my infrastructure &mdash; you never see a subscription and I own the uptime, which is what the higher figure pays for.</p>
+          <p>Either way the build is yours. Nothing is held hostage if you stop the monthly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ABOUT ============================ -->
+<section class="band band--about calm" id="about" data-ground="calm">
+  <div class="shell">
+    <span class="lbl eyebrow">About me</span>
+
+    <div class="about">
+      <div class="about__portrait reveal">
+        <img src="assets/xavier.jpg" alt="Xavier Duran, founder of Northstar Digital" width="440" height="440">
+        <div class="lbl about__tag">Xavier Duran &middot; Founder</div>
+      </div>
+      <div class="about__copy">
+        <h2 class="h about__title reveal">Xavier Duran. Not an agency queue.</h2>
+        <p class="about__body reveal">I run Northstar Digital out of Fort Myers. When you hire me, you get me &mdash; the same person on the first call, the build and the walkthrough six months later. No account managers, no handoffs, no ticket numbers.</p>
+        <p class="about__body reveal">The work I care most about is the explaining. A system you don't understand is a system you'll stop using, so every build ends with a session where you drive and I answer questions until it's boring.</p>
+        <div class="about__chips reveal">
+          <span class="chip ui chip--quiet">Southwest Florida based</span>
+          <span class="chip ui chip--quiet">Remote-friendly nationwide</span>
+          <span class="chip ui">Fixed scope, fixed price</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="proof reveal">
+      <div class="proof__copy">
+        <div class="lbl proof__label">Reserved &middot; client results</div>
+        <h3 class="h proof__title">Client results go here</h3>
+        <p class="proof__body">Space is reserved for real testimonials, named clients and before/after numbers. Send them over and they drop straight into this section &mdash; no invented proof in the meantime.</p>
+      </div>
+      <div class="proof__slots">
+        <div class="proof__slot"><span class="lbl">Quote 01</span></div>
+        <div class="proof__slot"><span class="lbl">Quote 02</span></div>
+        <div class="proof__slot"><span class="lbl">Quote 03</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section class="band band--contact calm" id="contact" data-ground="calm">
+  <div class="shell">
+    <span class="lbl eyebrow">Get started</span>
+    <h2 class="h band__title reveal">Tell me what's broken. I'll tell you what I'd build.</h2>
+    <p class="band__lede reveal">One form, five minutes. I'll come back with what I'd build, what it costs, and whether it's worth doing at all. Answer what you can &mdash; nothing is required except a way to reach you.</p>
+
+    <div class="steps">
+      <div class="card step reveal">
+        <div class="h step__num">1</div>
+        <div><div class="ui step__name">Send the form</div><div class="step__note">Five minutes, no obligation on either side.</div></div>
+      </div>
+      <div class="card step reveal">
+        <div class="h step__num">2</div>
+        <div><div class="ui step__name">We talk for 30 minutes</div><div class="step__note">You describe the week that annoys you. I ask questions.</div></div>
+      </div>
+      <div class="card step reveal">
+        <div class="h step__num step__num--accent">3</div>
+        <div><div class="ui step__name">You get a written price</div><div class="step__note">Fixed scope, fixed cost. Yours to think about.</div></div>
+      </div>
+    </div>
+
+    <div class="contact">
+      <div class="contact__details">
+        <a class="contact__row" href="tel:">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2z"/></svg>
+          <div><div class="ui contact__name">Call or text</div><div class="ph contact__val">[YOUR PHONE]</div></div>
+        </a>
+        <a class="contact__row" href="mailto:northstarsolutions.work@gmail.com">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6.5 9 6 9-6"/></svg>
+          <div><div class="ui contact__name">Email</div><div class="ph contact__val">northstarsolutions.work@gmail.com</div></div>
+        </a>
+        <div class="contact__row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>
+          <div><div class="ui contact__name">Reply within one business day</div><div class="contact__sub">Usually the same afternoon</div></div>
+        </div>
+        <div class="contact__row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10.5c0 5.4-8 12-8 12s-8-6.6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10.5" r="2.8"/></svg>
+          <div><div class="ui contact__name">Fort Myers, FL</div><div class="contact__sub">In person across SWFL, remote anywhere</div></div>
+        </div>
+        <div class="contact__row contact__row--last">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6.5V12c0 5 3.4 8.3 8 9.5 4.6-1.2 8-4.5 8-9.5V6.5z"/></svg>
+          <div><div class="ui contact__name">Your details stay with me</div><div class="contact__sub">No lists, no resale, no spam</div></div>
+        </div>
+      </div>
+
+      <div class="card inquiry reveal">
+        <form id="inquiryForm" novalidate>
+          <div class="lbl inquiry__label">Project inquiry</div>
+          <div class="inquiry__grid">
+            <label class="field"><span class="lbl field__label">Your name</span><input class="fld" name="name" placeholder="Jane Rivera" autocomplete="name"></label>
+            <label class="field"><span class="lbl field__label">Business name</span><input class="fld" name="business" placeholder="Rivera Plumbing" autocomplete="organization"></label>
+            <label class="field"><span class="lbl field__label">Email</span><input class="fld" name="email" type="email" placeholder="you@business.com" autocomplete="email"></label>
+            <label class="field"><span class="lbl field__label">Phone</span><input class="fld" name="phone" type="tel" placeholder="(239) 000-0000" autocomplete="tel"></label>
+            <label class="field"><span class="lbl field__label">Industry or trade</span><input class="fld" name="industry" placeholder="Plumbing"></label>
+            <label class="field"><span class="lbl field__label">Team size</span><input class="fld" name="team" placeholder="Just me"></label>
+          </div>
+
+          <fieldset class="budget">
+            <legend class="lbl field__label">Budget range</legend>
+            <div class="budget__chips" id="budgetChips">
+              <button type="button" class="chip ui bchip" data-budget="Around $500">Around $500</button>
+              <button type="button" class="chip ui bchip" data-budget="Around $800">Around $800</button>
+              <button type="button" class="chip ui bchip" data-budget="Around $1.5k">Around $1.5k</button>
+              <button type="button" class="chip ui bchip" data-budget="Above $1.5k">Above $1.5k</button>
+              <button type="button" class="chip ui bchip" data-budget="Not sure yet">Not sure yet</button>
+            </div>
+            <input type="hidden" name="budget" id="budgetValue">
+          </fieldset>
+
+          <label class="field field--wide">
+            <span class="lbl field__label">What are you trying to fix?</span>
+            <textarea class="fld" name="problem" rows="3" placeholder="The thing that eats your week..." data-native-scroll></textarea>
+          </label>
+
+          <button class="btn btn-p inquiry__submit" type="submit">Send my inquiry
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="inquiry__warn" id="inquiryWarn" hidden>Add an email or a phone number so I have a way to reach you.</p>
+          <p class="inquiry__fineprint">Goes straight to northstarsolutions.work@gmail.com. Nothing is shared with anyone else.</p>
+        </form>
+
+        <div class="inquiry__done" id="inquiryDone" hidden>
+          <div class="inquiry__check">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12.5 5.2 5.2L20 7"/></svg>
+          </div>
+          <h3 class="h">Got it &mdash; thank you.</h3>
+          <p>I'll read it properly and come back with what I'd build, what it would cost, and honest thoughts on whether it's worth doing.</p>
+          <button class="btn btn-s ui" type="button" id="inquiryReset">Send another</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="shell">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <div class="foot__mark">
+          <img src="assets/northstar-og.png" alt="" width="38" height="38">
+          <span class="nav__wordmark sh">
+            <span>NORTHSTAR</span>
+            <span class="nav__wordmark-dim">DIGITAL</span>
+          </span>
+        </div>
+        <p class="foot__blurb">AI systems, graphics, contractor solutions and content systems for businesses that want to operate smarter.</p>
+        <div class="lbl foot__where">Fort Myers, FL &middot; Serving SWFL</div>
+      </div>
+      <div>
+        <div class="lbl foot__head">Site</div>
+        <div class="foot__links">
+          <a href="#services" class="ui navlink">What I build</a>
+          <a href="#how" class="ui navlink">How it works</a>
+          <a href="#results" class="ui navlink">What you get back</a>
+          <a href="#pricing" class="ui navlink">Pricing</a>
+          <a href="#about" class="ui navlink">About me</a>
+        </div>
+      </div>
+      <div>
+        <div class="lbl foot__head">Get in touch</div>
+        <div class="foot__links">
+          <a href="tel:" class="ui ph">[YOUR PHONE]</a>
+          <a href="mailto:northstarsolutions.work@gmail.com" class="ui ph">northstarsolutions.work@gmail.com</a>
+          <a href="#contact" class="ui ph" id="bookingLink">Book a consultation</a>
+        </div>
+        <a href="#contact" class="ui foot__cta">Start a project inquiry &rarr;</a>
+      </div>
+    </div>
+    <div class="foot__base">
+      <span class="lbl">&copy; <span class="ph" id="year">2026</span> Northstar Digital &middot; Xavier Duran</span>
+      <span class="sh foot__tagline">Smart systems. Stronger brands. Scalable operations.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="jtip" id="jtip" hidden>
+  <div class="lbl jtip__title"></div>
+  <p class="jtip__body"></p>
+</div>
+
+<!-- the zoom sheet a service card opens into -->
+<div class="sheet" id="sheet" hidden>
+  <div class="sheet__scrim" data-sheet-close></div>
+  <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="sheet__head">
+      <h3 class="h sheet__title" id="sheetTitle"></h3>
+      <button class="sheet__close" type="button" data-sheet-close aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="sheet__body" id="sheetBody" data-native-scroll></div>
+  </div>
+</div>
+
+<script src="motion.js"></script>
+</body>
+</html>

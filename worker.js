@@ -1,12 +1,28 @@
+/* Northstar Digital — the whole live site.
+   Static files (index.html, styles.css, motion.js, assets/...) are served
+   by the built-in ASSETS binding below. The one dynamic route is the
+   contact form, which sends mail through Cloudflare's own Email Workers
+   rather than a third-party form service — nothing but Cloudflare ever
+   sees a submission. */
 import { EmailMessage } from 'cloudflare:email';
 import { createMimeMessage } from 'mimetext';
 
 const FROM_ADDRESS = 'inquiries@northstarsolutions.online';
 const TO_ADDRESS    = 'northstarsolutions.work@gmail.com';
 
-export async function onRequestPost(context) {
-  const { request, env } = context;
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
 
+    if (url.pathname === '/api/inquiry' && request.method === 'POST') {
+      return handleInquiry(request, env);
+    }
+
+    return env.ASSETS.fetch(request);
+  }
+};
+
+async function handleInquiry(request, env) {
   let data;
   try {
     data = await request.json();
@@ -34,6 +50,14 @@ export async function onRequestPost(context) {
   msg.addMessage({ contentType: 'text/plain', data: body });
 
   const message = new EmailMessage(FROM_ADDRESS, TO_ADDRESS, msg.asRaw());
+
+  /* env.SEND_EMAIL is not code — it's a "Send Email" binding added under
+     Settings -> Bindings in the Cloudflare dashboard, pointed at
+     northstarsolutions.work@gmail.com. Nothing sends until that binding
+     exists and that address is verified under Email -> Email Routing. */
+  if (!env.SEND_EMAIL) {
+    return json({ ok: false, error: 'email binding not configured' }, 500);
+  }
 
   try {
     await env.SEND_EMAIL.send(message);

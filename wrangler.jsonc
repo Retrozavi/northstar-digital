@@ -6,5 +6,14 @@
     "directory": "./",
     "binding": "ASSETS",
     "not_found_handling": "404-page"
-  }
+  },
+  /* Declared here so it survives every deploy. A binding added by hand in
+     the dashboard gets silently dropped by the next `wrangler deploy`
+     because deploys are declarative -- only what's in this file ships. */
+  "send_email": [
+    {
+      "name": "SEND_EMAIL",
+      "destination_address": "digitalzaviofficial@gmail.com"
+    }
+  ]
 }

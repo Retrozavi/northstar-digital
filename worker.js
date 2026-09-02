@@ -8,7 +8,11 @@ import { EmailMessage } from 'cloudflare:email';
 import { createMimeMessage } from 'mimetext';
 
 const FROM_ADDRESS = 'inquiries@northstarsolutions.online';
-const TO_ADDRESS    = 'northstarsolutions.work@gmail.com';
+/* Temporary: the business inbox is locked out, so inquiries route to the
+   personal address that's verified in Email Routing right now. Swap this
+   back to northstarsolutions.work@gmail.com (and re-verify it there) once
+   access to that inbox is restored. */
+const TO_ADDRESS    = 'digitalzaviofficial@gmail.com';
 
 export default {
   async fetch(request, env) {

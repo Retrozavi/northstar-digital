@@ -667,9 +667,9 @@
      straight to it. Until then the form falls back to opening a pre-filled
      email — it never pretends to have sent something it did not send.
      ===================================================================== */
-  var CONTACT_EMAIL  = 'northstarsolutions.work@gmail.com';
-  var FORM_ENDPOINT  = '';   /* <-- paste your form endpoint here */
-  var BOOKING_URL    = '';   /* <-- paste your Notion Form share link here */
+  var CONTACT_EMAIL  = 'digitalzaviofficial@gmail.com';
+  var FORM_ENDPOINT  = 'https://formspree.io/f/xrpgkkdq';
+  var BOOKING_URL    = 'https://app.notion.com/p/5051c51506554980acd56018eacf4add?v=15e2a9d1c81942fd9d144d0f18e8e79b&source=copy_link';
 
   var bookingLink = document.getElementById('bookingLink');
   if (bookingLink && BOOKING_URL) {

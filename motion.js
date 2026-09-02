@@ -402,14 +402,46 @@
   var orbitRate = 0.1385;
   var orbitFrom = 0;
 
+  /* On a phone the acts un-pin, so there is no long pinned scroll to spin
+     the orbit against — and a thumb-scroll past the hero is over in a
+     second. There it turns on its own clock instead. Pointer devices keep
+     the scroll-driven version: the reader moves it. */
+  var touchOrbit = window.matchMedia('(max-width: 760px)');
+  var AUTO_DEG_PER_SEC = 9;    /* one revolution every 40s */
+  /* a narrower window on the phone: one card reads at a time, with a
+     beat of quiet between them, instead of two always half-open */
+  var TOUCH_DOCK_WINDOW = 40;
+  var autoSpin = 0;
+  var autoPrev = 0;
+  var orreryOnScreen = true;
+
+  if (orrery && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (entries) {
+      orreryOnScreen = entries[entries.length - 1].isIntersecting;
+    }, { rootMargin: '80px' }).observe(orrery);
+  }
+
   function angleDelta(a, b) {
     var d = ((a - b) % 360 + 540) % 360 - 180;
     return Math.abs(d);
   }
 
-  function driveOrrery(scrollY) {
+  function driveOrrery(scrollY, time) {
     if (!orrery || !tracks.length) return;
-    var base = (scrollY - orbitFrom) * orbitRate;
+
+    var base;
+    if (touchOrbit.matches) {
+      /* nothing to draw while it is parked off screen */
+      if (!orreryOnScreen) { autoPrev = 0; return; }
+      /* accumulate rather than read the clock, so switching modes or
+         coming back from a background tab never snaps the orbit */
+      if (autoPrev) autoSpin += Math.min(time - autoPrev, 60) / 1000 * AUTO_DEG_PER_SEC;
+      autoPrev = time;
+      base = autoSpin;
+    } else {
+      autoPrev = 0;
+      base = (scrollY - orbitFrom) * orbitRate;
+    }
     for (var i = 0; i < tracks.length; i++) {
       var t = tracks[i];
       var spin = base * t.rate * t.rev;
@@ -417,8 +449,9 @@
 
       for (var j = 0; j < t.nodes.length; j++) {
         var n = t.nodes[j];
+        var win = touchOrbit.matches ? TOUCH_DOCK_WINDOW : DOCK_WINDOW;
         var dist = angleDelta(n.ang + spin, n.dock);
-        var open = dist >= DOCK_WINDOW ? 0 : easeOut(1 - dist / DOCK_WINDOW);
+        var open = dist >= win ? 0 : easeOut(1 - dist / win);
         if (open !== n.last) {
           n.last = open;
           n.el.style.setProperty('--dock', open.toFixed(3));
@@ -575,7 +608,7 @@
 
     /* --- the rest --- */
     if (!reduced) {
-      driveOrrery(y);
+      driveOrrery(y, time);
       driveFlowDash(y);
     }
     if (peakPinned) drivePeak(peakP);
@@ -663,13 +696,13 @@
 
   /* =====================================================================
      WHERE THE INQUIRY GOES
-     Set FORM_ENDPOINT to a Formspree or Web3Forms URL and submissions post
-     straight to it. Until then the form falls back to opening a pre-filled
-     email — it never pretends to have sent something it did not send.
+     FORM_ENDPOINT posts submissions straight to Formspree, which forwards
+     them to the connected inbox. No mailto fallback — the visitor's email
+     app is never opened.
      ===================================================================== */
-  var CONTACT_EMAIL  = 'northstarsolutions.work@gmail.com';
-  var FORM_ENDPOINT  = '';   /* <-- paste your form endpoint here */
-  var BOOKING_URL    = '';   /* <-- paste your Notion Form share link here */
+  var CONTACT_EMAIL  = 'digitalzaviofficial@gmail.com';
+  var FORM_ENDPOINT  = '/api/inquiry';
+  var BOOKING_URL    = 'https://app.notion.com/p/5051c51506554980acd56018eacf4add?v=15e2a9d1c81942fd9d144d0f18e8e79b&source=copy_link';
 
   var bookingLink = document.getElementById('bookingLink');
   if (bookingLink && BOOKING_URL) {
@@ -685,24 +718,6 @@
       if (el) f[k] = (el.value || '').trim();
     });
     return f;
-  }
-
-  function mailtoFallback(f) {
-    var lines = [
-      'Name: '     + (f.name     || '-'),
-      'Business: ' + (f.business || '-'),
-      'Email: '    + (f.email    || '-'),
-      'Phone: '    + (f.phone    || '-'),
-      'Industry: ' + (f.industry || '-'),
-      'Team size: '+ (f.team     || '-'),
-      'Budget: '   + (f.budget   || '-'),
-      '',
-      'What they want fixed:',
-      f.problem || '-'
-    ].join('\n');
-    window.location.href = 'mailto:' + CONTACT_EMAIL +
-      '?subject=' + encodeURIComponent('Project inquiry — ' + (f.name || 'website')) +
-      '&body='    + encodeURIComponent(lines);
   }
 
   function showSent() {
@@ -726,9 +741,11 @@
       }
       var warn2 = document.getElementById('inquiryWarn');
       if (warn2) warn2.hidden = true;
+      var err = document.getElementById('inquiryError');
+      if (err) err.hidden = true;
 
       var btn = form.querySelector('.inquiry__submit');
-      if (!FORM_ENDPOINT) { mailtoFallback(f); showSent(); return; }
+      var btnLabel = btn ? btn.innerHTML : '';
 
       if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
       fetch(FORM_ENDPOINT, {
@@ -739,9 +756,8 @@
         if (!r.ok) throw new Error('bad status ' + r.status);
         showSent();
       }).catch(function () {
-        /* say so rather than showing a false success */
-        mailtoFallback(f);
-        showSent();
+        if (btn) { btn.disabled = false; btn.innerHTML = btnLabel; }
+        if (err) err.hidden = false;
       });
     });
   }
@@ -925,28 +941,21 @@
   window.addEventListener('scroll', hideTip, { passive: true });
 
   /* =====================================================================
-     GROUND SWITCH
+     GROUND
+     The page has no colour control. Midnight is the ground; a device set to
+     light mode gets daybreak instead, and a mid-session flip is followed.
      ===================================================================== */
-  var groundBtns = [].slice.call(document.querySelectorAll('.themes__btn'));
+  var lightQuery = window.matchMedia('(prefers-color-scheme: light)');
 
-  function setGround(name, remember) {
-    if (name && name !== 'midnight') doc.setAttribute('data-theme', name);
-    else { doc.removeAttribute('data-theme'); name = 'midnight'; }
-    groundBtns.forEach(function (b) {
-      b.setAttribute('aria-pressed', String(b.dataset.ground === name));
-    });
+  function applyGround() {
+    if (lightQuery.matches) doc.setAttribute('data-theme', 'daybreak');
+    else doc.removeAttribute('data-theme');
     readStarColour();
-    if (remember) { try { localStorage.setItem('ns-ground', name); } catch (e) {} }
   }
 
-  groundBtns.forEach(function (b) {
-    b.addEventListener('click', function () { setGround(b.dataset.ground, true); });
-  });
-
-  try {
-    var saved = localStorage.getItem('ns-ground');
-    if (saved) setGround(saved, false);
-  } catch (e) { /* private mode; midnight stands */ }
+  applyGround();
+  if (lightQuery.addEventListener) lightQuery.addEventListener('change', applyGround);
+  else if (lightQuery.addListener) lightQuery.addListener(applyGround);
 
   var yr = document.getElementById('year');
   if (yr) yr.textContent = new Date().getFullYear();

@@ -1,0 +1,8 @@
+{
+  "name": "northstar-digital-site",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "mimetext": "^3.0.24"
+  }
+}

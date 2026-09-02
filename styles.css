@@ -60,7 +60,14 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scrollbar-gutter: stable; }
+html {
+  scroll-behavior: smooth; scrollbar-gutter: stable;
+  /* Both html and body have to clip, or a phone treats anything hanging
+     past the edge as page width, zooms out to fit, and then re-fits as
+     that width changes under scroll. */
+  overflow-x: hidden;
+  overflow-x: clip;
+}
 /* the sheet owns the screen while it is open */
 html.is-locked { overflow: hidden; }
 /* the JS smoother owns scrolling on pointer devices; native handles the rest */
@@ -804,6 +811,22 @@ textarea.fld { height: 86px; resize: vertical; padding-top: 8px; }
   .proof__slots { grid-template-columns: 1fr; }
   .journey { padding: 46px 18px 20px; overflow-x: auto; }
   .journey__chart { min-width: 720px; }
+
+  /* The orbit turns on its own here, so a card is always swinging out
+     somewhere. Pull the ring in and shrink the cards until the widest
+     reach still lands inside the screen. */
+  /* The ring and its cards scale with the screen instead of sitting at a
+     fixed size, so the widest reach of a turning card lands inside the
+     edge on a 320px phone as well as a 430px one. */
+  .orrery { max-width: min(210px, 56vw); }
+  /* border-box so the padding stops widening the card past what fits */
+  .orrery .pop {
+    box-sizing: border-box;
+    --pop-w: min(100px, calc(34vw - 28px));
+    --pop-fs: 10px; --pop-pad: 7px 9px 8px;
+  }
+  .pop__label { font-size: 8px; margin-bottom: 4px; }
+  .pop__body { line-height: 1.35; }
 }
 
 @media (max-width: 560px) {
@@ -1054,35 +1077,16 @@ textarea.fld { height: 86px; resize: vertical; padding-top: 8px; }
 
 /* =====================================================================
    GROUNDS
-   Three palettes over the same layout. Every colour on the page resolves
+   Two palettes over the same layout. Every colour on the page resolves
    through the channel tokens above, so a ground swaps the whole site.
+   Which one loads is decided by the reader's device unless they pick.
    ===================================================================== */
-
-/* --- COBALT: cool blue gradient. Lifted well off black, stars still light. --- */
-:root[data-theme="cobalt"] {
-  --ground-rgb: 15 26 46;
-  --panel-rgb:  23 36 60;
-  --panel2-rgb: 18 29 49;
-  --gray-rgb:   152 170 197;
-  --ice-rgb:    214 230 250;
-  --text-rgb:   234 240 250;
-  --star-rgb:   205 227 255;
-  --chip-ink-rgb: 168 209 255;
-  --placeholder-rgb: 116 134 160;
-  --stage-base: #101a2e;
-  --ground-bg: linear-gradient(178deg, #1b2a49 0%, #14223b 38%, #0e1729 72%, #0b1220 100%);
-  --tint:
-    radial-gradient(120% 90% at 78% 6%,  rgb(var(--accent-rgb) / 0.3), transparent 60%),
-    radial-gradient(95% 75% at 6% 94%,   rgb(120 90 255 / 0.16), transparent 62%),
-    linear-gradient(180deg, rgb(var(--ground-rgb) / 0.42) 0%, rgb(var(--ground-rgb) / 0.24) 44%, rgb(var(--ground-rgb) / 0.62) 100%);
-  --vignette: radial-gradient(118% 88% at 50% 42%, transparent 48%, rgb(6 12 24 / 0.6) 100%);
-}
 
 /* --- DAYBREAK: pale cool gradient. The field inverts to navy so the
        stars survive on a light ground, and the mark gets a plate. --- */
 :root[data-theme="daybreak"] {
   /* no plate: the mark sits on its own, lit from behind */
-  --logo-glow: drop-shadow(0 0 14px rgb(var(--accent-rgb) / 0.55)) drop-shadow(0 1px 2px rgb(20 40 80 / 0.4));
+  --logo-glow: drop-shadow(0 0 7px rgb(var(--accent-rgb) / 0.26)) drop-shadow(0 1px 1.5px rgb(20 40 80 / 0.2));
   --ground-rgb: 233 240 250;
   --panel-rgb:  255 255 255;
   --panel2-rgb: 244 248 253;
@@ -1111,23 +1115,6 @@ textarea.fld { height: 86px; resize: vertical; padding-top: 8px; }
 :root[data-theme="daybreak"] .sheet__panel { box-shadow: 0 24px 60px -28px rgb(30 60 110 / 0.35); }
 :root[data-theme="daybreak"] .sheet__scrim { background: rgb(210 224 244 / 0.72); }
 :root[data-theme="daybreak"] .btn-p { color: #fff; }
-
-/* --- the ground switch itself --- */
-.themes {
-  display: inline-flex; align-items: center; gap: 2px; padding: 3px;
-  border: 1px solid var(--line); border-radius: 999px; background: rgb(var(--panel-rgb) / 0.6);
-}
-.themes__btn {
-  width: 24px; height: 24px; border-radius: 50%; cursor: pointer; padding: 0;
-  border: 1px solid rgb(var(--gray-rgb) / 0.35); background: var(--sw, #0a0a0a);
-  transition: transform .18s, border-color .18s, box-shadow .18s;
-}
-.themes__btn:hover { transform: scale(1.12); }
-.themes__btn[aria-pressed="true"] {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgb(var(--accent-rgb) / 0.35);
-}
-@media (max-width: 620px) { .themes { display: none; } }
 
 /* the two monthly models under each tier price */
 .tier__mo {

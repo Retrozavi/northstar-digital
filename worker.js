@@ -1,4 +1,4 @@
-/* Northstar Digital — the whole live site.
+/* Northstar Solutions — the whole live site.
    Static files (index.html, styles.css, motion.js, assets/...) are served
    by the built-in ASSETS binding below. The one dynamic route is the
    contact form, which sends mail through Cloudflare's own Email Workers
@@ -48,17 +48,18 @@ async function handleInquiry(request, env) {
   ].join('\n');
 
   const msg = createMimeMessage();
-  msg.setSender({ name: 'Northstar Digital Website', addr: FROM_ADDRESS });
+  msg.setSender({ name: 'Northstar Solutions Website', addr: FROM_ADDRESS });
   msg.setRecipient(TO_ADDRESS);
   msg.setSubject('Project inquiry — ' + (data.name || 'website'));
   msg.addMessage({ contentType: 'text/plain', data: body });
 
   const message = new EmailMessage(FROM_ADDRESS, TO_ADDRESS, msg.asRaw());
 
-  /* env.SEND_EMAIL is not code — it's a "Send Email" binding added under
-     Settings -> Bindings in the Cloudflare dashboard, pointed at
-     northstarsolutions.work@gmail.com. Nothing sends until that binding
-     exists and that address is verified under Email -> Email Routing. */
+  /* env.SEND_EMAIL is not code — it's the send_email binding declared in
+     wrangler.jsonc. Keep it there, not in the dashboard: `wrangler deploy`
+     is declarative, so a binding added by hand in the dashboard is wiped
+     by the next deploy. The destination must also be verified under
+     Email -> Email Routing before anything sends. */
   if (!env.SEND_EMAIL) {
     return json({ ok: false, error: 'email binding not configured' }, 500);
   }

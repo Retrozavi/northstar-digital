@@ -1,4 +1,4 @@
-# Northstar Digital — v2 (scroll-driven build)
+# Northstar Solutions — v2 (scroll-driven build)
 
 A standalone, deploy-ready site. No build step, no framework, no CDN dependencies.
 Three files plus assets:
@@ -251,7 +251,7 @@ pretend to have sent something that has no way back to you.
 
 ## The Notion consultation form
 
-A **Consultation Requests** database now lives under your Northstar Digital page,
+A **Consultation Requests** database now lives under your Northstar Solutions page,
 with an interview template inside it.
 
 **One step is left, and it must be done in the Notion UI:**

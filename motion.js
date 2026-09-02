@@ -1,5 +1,5 @@
 /* =====================================================================
-   NORTHSTAR DIGITAL — motion engine
+   NORTHSTAR SOLUTIONS — motion engine
 
    One scroll value drives everything. There is exactly one rAF loop and
    exactly one source of truth, so the film, the acts, the orrery and the

@@ -1,0 +1,10 @@
+# macOS AppleDouble sidecar files
+._*
+.DS_Store
+
+# dependencies
+node_modules/
+
+# editor / OS noise
+Thumbs.db
+*.log
